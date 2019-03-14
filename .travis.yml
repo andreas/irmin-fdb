@@ -10,6 +10,6 @@ before_install:
   - sudo dpkg -i foundationdb-clients_6.0.15-1_amd64.deb foundationdb-server_6.0.15-1_amd64.deb
 env:
   global:
-    - PINS="irmin-fdb:. fdb:https://github.com/andreas/ocaml-fdb.git irmin irmin-chunk bigstringaf irmin-test:https://github.com/mirage/irmin.git"
+    - PINS="irmin-fdb:. fdb:https://github.com/andreas/ocaml-fdb.git#ctypes-stubs irmin irmin-chunk bigstringaf irmin-test:https://github.com/mirage/irmin.git"
   matrix:
   - OCAML_VERSION="4.07" PACKAGE="irmin-fdb"
